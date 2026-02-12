@@ -20,7 +20,7 @@ class ReportGenerator:
         categorical_cols = self.df.select_dtypes(include=['object']).columns
         for col in categorical_cols:
             stats['contagem_categorias'][col] = self.df[col].value_counts().to_dict()
-        
+         
         self.report_data['estatisticas'] = stats
         return stats
     
